@@ -1,0 +1,30 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environment
+venv/
+env/
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+media/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+
+# Miscellaneous
+*.DS_Store
+*.coverage
+*.tox
+*.nox
+*.hypothesis
+*.mypy_cache
