@@ -1,0 +1,211 @@
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.18);
+  --blue-1: #62b8f5;
+  --blue-2: #0e39a4;
+  --shadow: rgba(3, 46, 87, 0.2);
+  --error-red: #ff4d4f;
+  --dark-blue: #052933;
+}
+
+body {
+  color: var(--white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.container {
+  color: var(--dark-blue);
+  background: var(--transp-white-2);
+  backdrop-filter: blur(15px);
+  height: 500px;
+  width: 45%;
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 2rem;
+  border: 2px solid var(--transp-white-1);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  color: var(--dark-blue);
+  background-color: transparent;
+  padding: 0.8rem;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  outline: none;
+  flex: 0.7;
+}
+
+.btn {
+  color: var(--blue-2);
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  border: 2px solid var(--blue-2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 0.25;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.error-message {
+  text-align: center;
+  color: var(--error-red);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+.weather {
+  height: 250px;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left,
+.right {
+  text-align: center;
+  background: var(--transp-white-2);
+  height: 80%;
+  width: 50%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.temp {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.city {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+.icon img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+  transform: scale(1.1);
+}
+
+.condition p {
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .container {
+    height: 450px;
+    width: 50%;
+    padding: 1.5rem;
+    margin: auto;
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+  .left,
+  .right {
+    height: 80%;
+  }
+  .temp {
+    font-size: 1.8rem;
+  }
+  .city {
+    font-size: 1.5rem;
+  }
+  .icon img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    height: 400px;
+    width: 70%;
+    padding: 1rem;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .input {
+    padding: 0.6rem;
+  }
+  .btn {
+    width: 100%;
+  }
+  .left,
+  .right {
+    height: 50%;
+    width: 80%;
+  }
+  .weather {
+    margin-top: 0;
+  }
+  .temp {
+    font-size: 1.5rem;
+  }
+  .city {
+    font-size: 1rem;
+  }
+  .icon img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    height: 500px;
+  }
+  .heading {
+    font-size: 1.5rem;
+    margin-top: -7rem;
+  }
+  .weather {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
